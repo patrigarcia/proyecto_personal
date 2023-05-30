@@ -15,14 +15,14 @@ header {
 }
 
 .logo {
-  width: 7%;
+  width: 8%;
   height: auto;
   margin: 0 3% 0 3%;
 }
 
 h1 {
   font-family: "Nunito Sans", sans-serif;
-  font-weight: 700;
+  font-weight: bolder;
   font-size: 1.7em;
   padding-top: 1%;
 }
@@ -43,7 +43,11 @@ ul.icon_container {
 }
 
 nav.menu {
-  background-color: rgba(47, 36, 70, 0.5);
+  background: linear-gradient(
+    90deg,
+    rgba(27, 218, 255, 1) 0%,
+    rgba(140, 82, 255, 1) 100%
+  );
   height: 60px;
   display: flex;
   justify-content: center;
@@ -75,7 +79,6 @@ nav ul {
 nav ul li {
   width: 25%;
   height: 20%;
-  background-color: rgba(140, 82, 255, 1);
   text-align: center;
   border: 1px solid #7231f4;
   justify-content: center;
@@ -84,46 +87,124 @@ nav ul li {
 }
 
 /*---------------Main------------------------*/
-
-.image_container {
+.main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 100%;
+  position: relative;
+}
+.image_container,
+.image_index,
+.image_portfolio {
   background-color: #ded1f8;
-  opacity: 0.2;
+  opacity: 0.5;
   width: 100%;
-  background-image: url("../images/fondo.jpeg");
   background-color: white;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
+}
+.image_portfolio {
+  background-image: url("../images/home.jpg");
+}
+.image_container {
+  background-image: url("../images/fondo.jpeg");
+}
+.image_index {
+  background-image: url("../images/home.jpg");
+}
+
+#caja_texto {
+  padding: 10px;
+  opacity: 0.9;
+  width: 90%;
+  height: auto;
+  top: 25%;
+  left: 5%;
+  position: absolute;
+  z-index: 1;
+}
+
+#bio {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h2 {
+  background-color: white;
+  padding: 10px 10px 0 10px;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .texto {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 10px;
   color: black;
-  font-size: 20px;
-  font-weight: bold;
+  opacity: none;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  font-family: "Quicksand", sans-serif;
+}
+
+.texto2 {
+  background-color: white;
+  width: 50%;
+  height: 70%;
+  margin-left: 50%;
+  padding: 10px;
+  color: black;
+  opacity: none;
+  font-size: 1.1rem;
+  font-weight: bolder;
   font-family: "Quicksand", sans-serif;
 }
 
 .foto {
-  background-image: url("../images/foto.png");
-  width: 300px;
-  height: 300px;
+  background-image: url("../images/foto.svg");
+  width: 180px;
+  height: 180px;
   background-size: cover;
   background-position: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+  top: 55%;
+  left: 5%;
 }
+/*------------Galería de portfolio------------*/
+
+.carousel-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+}
+
 /*----------------Pie de página---------------*/
 
 .footer-container {
-  background-color: #8c52ff;
+  background: linear-gradient(
+    90deg,
+    rgba(27, 218, 255, 1) 0%,
+    rgba(140, 82, 255, 1) 100%
+  );
   padding: 20px;
   text-align: center;
   color: white;
@@ -173,7 +254,11 @@ h4 {
   }
 
   nav ul {
-    background-color: #8c52ff;
+    background: linear-gradient(
+      90deg,
+      rgba(27, 218, 255, 1) 0%,
+      rgba(140, 82, 255, 1) 100%
+    );
     height: 60px;
     display: flex;
     flex-direction: row;
@@ -187,7 +272,7 @@ h4 {
     text-align: center;
     margin: 10px;
     font-family: "Quicksand", sans-serif;
-    border: 1px solid #8c52ff;
+    border: none;
     font-weight: 700;
     font-size: 1em;
     gap: 10%;
@@ -204,7 +289,27 @@ h4 {
   }
 }
 
+.image_container {
+  background-color: #ded1f8;
+  opacity: 0.5;
+  width: 100%;
+  background-image: url("../images/fondo.jpeg");
+  background-color: white;
+  background-size: cover;
+  min-height: 60vh;
+  display: flex;
+}
+
 /*::::::::::::::::::992px:::::::::::::::::::::*/
 
 @media screen and (min-width: 992px) {
+  nav ul li {
+    text-align: center;
+    margin: 10px;
+    font-family: "Quicksand", sans-serif;
+    border: 1px solid #8c52ff;
+    font-weight: 700;
+    font-size: 1.3em;
+    gap: 10%;
+  }
 }
